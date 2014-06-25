@@ -75,8 +75,9 @@ func (o *Options) toBuildOptions() *build.Options {
 // Note that dir is not relative to any GOPATH, but relative to the working directory.
 // The first error during the built is returned.
 // dir must be an existing directory containing at least one go file
-// target must not be nil
-// options may be nil (defaults)
+//
+//   target must not be nil
+//   options may be nil (defaults)
 func BuildPackage(dir string, target io.Writer, options *Options) error {
 	b, err := NewPackageBuilder(dir, target, options)
 	if err != nil {
@@ -87,9 +88,10 @@ func BuildPackage(dir string, target io.Writer, options *Options) error {
 
 // Build builds JavaScript based on the go code in reader, writing the result to target.
 // The first error during the built is returned. All errors are typed.
-// reader must not be nil
-// target must not be nil
-// options may be nil (defaults)
+//
+//   reader must not be nil
+//   target must not be nil
+//   options may be nil (defaults)
 func Build(reader io.Reader, target io.Writer, options *Options) error {
 	pb := NewBuilder(target, options)
 	pb.Add("main.go", reader)
@@ -114,8 +116,9 @@ type builder struct {
 }
 
 // NewBuilder creates a new Builder that will write to target.
-// target must not be nil
-// options may be nil (defaults)
+//
+//   target must not be nil
+//   options may be nil (defaults)
 func NewBuilder(target io.Writer, options *Options) Builder {
 	return &builder{
 		files:   map[string]io.Reader{},
