@@ -194,12 +194,16 @@ func (b *builder) Build() error {
 
 	s := build.NewSession(b.options)
 
-	archive, err := compiler.Compile(b.pkgName, files, fileSet, s.ImportContext, b.options.Minify)
+	importContext := &compiler.ImportContext{
+		Packages: s.Types,
+		Import:   s.BuildImportPath,
+	}
+	archive, err := compiler.Compile(b.pkgName, files, fileSet, importContext, b.options.Minify)
 	if err != nil {
 		return ErrorCompiling(err.Error())
 	}
 
-	deps, err := compiler.ImportDependencies(archive, s.ImportContext.Import)
+	deps, err := compiler.ImportDependencies(archive, s.BuildImportPath)
 	if err != nil {
 		return ErrorImportingDependencies(err.Error())
 	}
