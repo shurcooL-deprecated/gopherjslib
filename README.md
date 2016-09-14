@@ -1,4 +1,7 @@
-# gopherjslib [![Build Status](https://travis-ci.org/shurcooL/gopherjslib.svg?branch=master)](https://travis-ci.org/shurcooL/gopherjslib) [![GoDoc](https://godoc.org/github.com/shurcooL/gopherjslib?status.svg)](https://godoc.org/github.com/shurcooL/gopherjslib)
+gopherjslib
+===========
+
+[![Build Status](https://travis-ci.org/shurcooL/gopherjslib.svg?branch=master)](https://travis-ci.org/shurcooL/gopherjslib) [![GoDoc](https://godoc.org/github.com/shurcooL/gopherjslib?status.svg)](https://godoc.org/github.com/shurcooL/gopherjslib)
 
 Package gopherjslib provides helpers for in-process GopherJS compilation.
 
@@ -35,7 +38,7 @@ Example compiling multiple files:
 
 	builder.Add("a.go", fileA)
 
-	// and so on for each file,then
+	// And so on for each file, then:
 
 	err = builder.Build()
 
@@ -45,3 +48,8 @@ Installation
 ```bash
 go get -u github.com/shurcooL/gopherjslib
 ```
+
+License
+-------
+
+-	[MIT License](LICENSE)
