@@ -192,7 +192,10 @@ func (b *builder) Build() error {
 		files = append(files, f)
 	}
 
-	s := build.NewSession(b.options)
+	s, err := build.NewSession(b.options)
+	if err != nil {
+		return err
+	}
 
 	importContext := &compiler.ImportContext{
 		Packages: s.Types,
