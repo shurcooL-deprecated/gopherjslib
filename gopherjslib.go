@@ -211,5 +211,5 @@ func (b *builder) Build() error {
 		return ErrorImportingDependencies(err.Error())
 	}
 
-	return compiler.WriteProgramCode(deps, &compiler.SourceMapFilter{Writer: b.target})
+	return compiler.WriteProgramCode(deps, &compiler.SourceMapFilter{Writer: b.target}, s.GoRelease())
 }
