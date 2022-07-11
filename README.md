@@ -1,7 +1,7 @@
 gopherjslib
 ===========
 
-[![Build Status](https://travis-ci.org/shurcooL/gopherjslib.svg?branch=master)](https://travis-ci.org/shurcooL/gopherjslib) [![GoDoc](https://godoc.org/github.com/shurcooL/gopherjslib?status.svg)](https://godoc.org/github.com/shurcooL/gopherjslib)
+[![Go Reference](https://pkg.go.dev/badge/github.com/shurcooL/gopherjslib.svg)](https://pkg.go.dev/github.com/shurcooL/gopherjslib)
 
 Package gopherjslib provides helpers for in-process GopherJS compilation.
 
@@ -45,8 +45,8 @@ Example compiling multiple files:
 Installation
 ------------
 
-```bash
-go get -u github.com/shurcooL/gopherjslib
+```sh
+go get github.com/shurcooL/gopherjslib
 ```
 
 License
