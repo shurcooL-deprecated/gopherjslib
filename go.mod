@@ -1,3 +1,5 @@
+// Deprecated: This module contains one deprecated package.
+// See the package deprecation notice for more information.
 module github.com/shurcooL/gopherjslib
 
 go 1.18

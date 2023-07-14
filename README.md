@@ -42,6 +42,12 @@ Example compiling multiple files:
 
 	err = builder.Build()
 
+**Deprecated:** The intermediate API layer implemented by this
+package has proven to be unhelpful and is now unmaintained.
+Use packages [`github.com/gopherjs/gopherjs/build`](https://pkg.go.dev/github.com/gopherjs/gopherjs/build)
+and [`github.com/gopherjs/gopherjs/compiler`](https://pkg.go.dev/github.com/gopherjs/gopherjs/compiler)
+or command [`github.com/gopherjs/gopherjs`](https://pkg.go.dev/github.com/gopherjs/gopherjs) directly instead.
+
 Installation
 ------------
 
